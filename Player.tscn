@@ -8,7 +8,7 @@ radius = 60.5
 height = 83.0
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 126.81, 135.486 )
+position = Vector2( 511.911, 414.873 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true

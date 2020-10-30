@@ -1,9 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Levels/TileSet.tres" type="TileSet" id=2]
 
 [node name="Level1" type="Node2D"]
 position = Vector2( -4.48987, 0 )
@@ -11,52 +9,12 @@ position = Vector2( -4.48987, 0 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 536.952, 106.322 )
 
-[node name="Floor" type="StaticBody2D" parent="."]
-position = Vector2( 519.795, 715.043 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor"]
-scale = Vector2( 10, 10 )
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
-visible = false
-scale = Vector2( 32, 32 )
-shape = SubResource( 1 )
-
-[node name="Floor2" type="StaticBody2D" parent="."]
-position = Vector2( 1142.06, 842.859 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor2"]
-scale = Vector2( 10, 10 )
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2"]
-visible = false
-scale = Vector2( 32, 32 )
-shape = SubResource( 1 )
-
-[node name="Floor3" type="StaticBody2D" parent="."]
-position = Vector2( -102.469, 604.045 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor3"]
-scale = Vector2( 10, 10 )
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor3"]
-visible = false
-scale = Vector2( 32, 32 )
-shape = SubResource( 1 )
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 518.494, 304.437 )
-current = true
 zoom = Vector2( 2, 2 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+collision_layer = 2147483650
+format = 1
+tile_data = PoolIntArray( -524256, 0, 0, -524250, 0, 0, -524244, 0, 0, -327654, 1, 0, -327627, 5, 0, -65517, 1, 0, 62, 6, 0, 65572, 5, 0, 262140, 4, 0, 196698, 0, 0, 262159, 3, 0, 262193, 5, 0, 262215, 7, 0, 327765, 7, 0, 393238, 0, 0, 393277, 7, 0, 458832, 5, 0, 589818, 7, 0, 524296, 0, 0, 524342, 3, 0, 524353, 7, 0, 589899, 3, 0, 917496, 0, 0, 917502, 2, 0, 851972, 2, 0, 851978, 2, 0, 851984, 2, 0, 851990, 2, 0, 851996, 2, 0, 852002, 2, 0, 917544, 2, 0, 917566, 2, 0, 917572, 2, 0, 983086, 2, 0, 1048629, 4, 0, 1048630, 4, 0, 1048636, 7, 0 )

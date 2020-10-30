@@ -8,15 +8,16 @@ radius = 60.5
 height = 83.0
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 511.911, 414.873 )
+position = Vector2( 494.564, 281.404 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="bunny1_stand" type="Sprite" parent="."]
-position = Vector2( 0, -0.5 )
+position = Vector2( -0.210236, 0.130676 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource( 1 )

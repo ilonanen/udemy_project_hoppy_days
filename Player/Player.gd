@@ -3,13 +3,13 @@ extends KinematicBody2D
 var motion = Vector2(0,0) # x, y
 
 const SPEED = 1200 # * delta
-const GRAVITY = 300 # * delta
+const GRAVITY = 150 # * delta
 const UP = Vector2(0, -1)
-const JUMP_SPEED = 4000
+const JUMP_SPEED = 3100
 
 signal animate
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	apply_gravity()
 	jump()
 	move()
@@ -20,6 +20,8 @@ func _physics_process(delta):
 func apply_gravity():
 	if is_on_floor():
 		motion.y = 0
+	elif is_on_ceiling():
+		motion.y = 1
 	else:
 		motion.y += GRAVITY # y suurenee alaspäin liikkuessa
 		

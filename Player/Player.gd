@@ -51,7 +51,7 @@ func animate():
 func hurt():
 	position.y -= 1 # to bypass gravity
 	yield(get_tree(), "idle_frame") # to bypass gravity
-	motion.y -= JUMP_SPEED
+	motion.y -= JUMP_SPEED * 0.75
 	$PainSFX.play()
 		
 		

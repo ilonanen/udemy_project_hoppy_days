@@ -1,7 +1,8 @@
 extends CanvasLayer
 
 func _ready():
-	$Control/TextureRect/HBoxContainer/LifeCount.text = "3"
+	pass
 	
-func update_lives(lives_left):
+func update_GUI(lives_left, coins_picked):
 	$Control/TextureRect/HBoxContainer/LifeCount.text = str(lives_left)
+	$Control/TextureRect/HBoxContainer/CoinCount.text = str(coins_picked)

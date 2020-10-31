@@ -90,8 +90,9 @@ __meta__ = {
 
 [node name="JumpSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
-volume_db = -10.0
+volume_db = -20.0
 
 [node name="PainSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
+volume_db = -18.0
 [connection signal="animate" from="." to="PlayerAnimation" method="_on_Player_animate"]

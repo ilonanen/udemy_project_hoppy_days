@@ -2,7 +2,7 @@ extends Node2D
 
 var timeout = false
 
-func _process(delta):
+func _process(_delta):
 	if $Sprite/RayCast2D.is_colliding():
 		fire()
 		

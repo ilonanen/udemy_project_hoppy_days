@@ -1,6 +1,6 @@
 extends Node2D
 
-var lives = 3
+var lives = 5
 var coins = 0
 var coins_for_life = 10
 
@@ -37,3 +37,6 @@ func update_GUI():
 func end_game():
 # warning-ignore:return_value_discarded
 	get_tree().change_scene("res://Levels/GameOver.tscn")
+	
+func win_game():
+	get_tree().change_scene("res://Levels/Victory.tscn")
